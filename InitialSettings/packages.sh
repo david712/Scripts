@@ -1,0 +1,21 @@
+update="sudo apt-get update"
+upgrade="sudo apt-get upgrade"
+apt_get="sudo apt-get install"
+zsh_aft="curl -L http://install.ohmyz.sh | sh"
+
+packs=(
+	"ssh"	 "gcc"	 "g++"	"vim"	"git"	"cvs"	"zsh"	"ftp"
+	"wget"	 "curl"	 "make"	"cmake"	"libm"
+	"libdl"	"mysql" "bin86"	"samba"	"ctags"	"fbset"
+	"nodejs" "minicom" "libtool"
+	"autoconf" "automake" "libc-dev" "gcc-4.4"
+	"build-essential"
+	"subversion"
+	"libpthread"	
+	"pkg-config"
+	"kernel-package"
+	"libstdc++6"
+	"libc6-dev"
+	"libncurses5-dev"			
+	"ibus-hangul"	
+)

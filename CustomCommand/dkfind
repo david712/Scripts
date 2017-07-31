@@ -1,0 +1,34 @@
+#!/bin/bash
+cur_path=$(pwd)
+
+if [ $# = 1 ]; then
+	find $cur_path -name '*.[ch]' | xargs grep -n $1
+elif [ $# = 2 ]; then
+	find $cur_path -name '*.[ch]' | xargs grep -n $1 | grep -n $2
+elif [ $# = 3 ]; then
+	find $cur_path -name '*.[ch]' | xargs grep -n $1 | grep -n $2 | grep -n $3
+elif [ $# = 4 ]; then
+	find $cur_path -name '*.[ch]' | xargs grep -n $1 | grep -n $2 | grep -n $3 | grep -n $4
+elif [ $# = 5 ]; then
+	find $cur_path -name '*.[ch]' | xargs grep -n $1 | grep -n $2 | grep -n $3 | grep -n $4 | grep -n $5
+else
+	echo "max 5 words"
+fi
+
+
+#find_str="find $cur_path -name *.[ch] | xargs "
+#grep_str="| grep -n"
+#
+#for i in $*
+#do
+#	if [ $i != $1 ]
+#	then
+#		find_str="${find_str} ${grep_str} $i"
+#	else
+#		find_str="${find_str} grep -n $i"	
+#	fi
+#done
+#
+#echo ${find_str}
+#${find_str}
+

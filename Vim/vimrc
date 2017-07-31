@@ -1,0 +1,63 @@
+syntax on
+set ai
+set si
+set cindent
+set shiftwidth=4
+set tabstop=4
+set hlsearch
+set nocompatible
+set bs=indent,eol,start
+set ruler
+set nobackup
+set title
+set wmnu
+set background=dark
+"set nu
+"set mouse=an
+
+
+
+
+""  ENCODINGS  """"""""""""""""""""""""""""""""""""""""""""""""""""
+set enc=utf-8	termencoding=utf-8	fileencoding=utf-8
+"set enc=cp949		termencoding=utf-8	"한글완성형
+"set enc=euc-kr		termencoding=utf-8 	fileencoding=utf-8	"저장을 utf-8로
+
+
+
+
+""  KEY MAPS  """""""""""""""""""""""""""""""""""""""""""""""""""""
+map <F2> gg=G<cr>
+
+map <F5> :call SetLineNum()<cr>
+map <F12> :call SetMouseUse()<cr>
+
+
+
+
+"" KEY TOGGLE DEFINITIONS """""""""""""""""""""""""""""""""""""""""
+:let g:tog1 = 0 
+:function SetLineNum()
+    :if g:tog1 == 0
+        :let g:tog1 = 1 
+        :set nu
+        :echo "\"Line Number\" enabled"
+    :else
+        :let g:tog1 = 0 
+        :set nonu
+        :echo "\"Line Number\" disabled"
+    :endif
+:endfunction
+
+:let g:tog2 = 0 
+:function SetMouseUse()
+    :if g:tog2 == 0
+        :let g:tog2 = 1 
+        :set mouse=an
+        :echo "\"Using Mouse\" enabled"
+    :else
+        :let g:tog2 = 0 
+        :set mouse-=an
+        :echo "\"Using Mouse\" disabled"
+    :endif
+:endfunction
